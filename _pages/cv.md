@@ -9,11 +9,13 @@ redirect_from:
 
 {% include base_path %}
 
+Link for full academic CV [here](https://GabrielSasseville01.github.io/gabrielsasseville.github.io/files/Full_Academic_CV.pdf). Link for a 1 page resume [here](https://GabrielSasseville01.github.io/gabrielsasseville.github.io/files/Short_Resume.pdf).
+<!-- 
 Education
 ======
-* Ph.D in Version Control Theory, GitHub University, 2018 (expected)
-* M.S. in Jekyll, GitHub University, 2014
-* B.S. in GitHub, GitHub University, 2012
+* M.Sc. in Astrophysics, University of Montreal and McGill University, 2023-2025
+  * Multivariate asynchronous time series interpolation with transformer-based architectures
+* B.Sc. in Computer Science and Physics, University of Montreal, 2020-2023
 
 Work experience
 ======
@@ -61,4 +63,4 @@ Teaching
   
 Service and leadership
 ======
-* Currently signed in to 43 different slack teams
+* Currently signed in to 43 different slack teams -->
