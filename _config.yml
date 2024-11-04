@@ -8,9 +8,9 @@
 
 # Basic Site Settings
 locale                   : "en-US"
-title                    : "Home"
+title                    : "About"
 title_separator          : "-"
-name                     : &name "Your Name"
+name                     : &name "Gabriel Sasseville"
 description              : &description "personal description"
 url                      : https://gabrielsasseville.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
@@ -24,7 +24,7 @@ author:
   avatar           : "profile.jpg"
   name             : "Gabriel Sasseville"
   pronouns         : # example: "she/her"  
-  bio              : "Short biography for the left-hand sidebar"
+  bio              : "M.Sc. in Astrophysics. Interested in ML applications."
   location         : "Montreal"
   employer         : "University of Montreal/McGill"
   uri              : # URL
@@ -82,6 +82,8 @@ publication_category:
     title: 'Journal Articles'    
   conferences:
     title: 'Conference Papers'
+  other:
+    title: 'Other Peer-Reviewed Publications'
 
 # Site Settings
 teaser                   :  # filename of teaser fallback teaser image placed in /images/, .e.g. "500x300.png"
