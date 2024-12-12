@@ -21,7 +21,7 @@ repository               : "GabrielSasseville01/GabrielSasseville01.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "profile.jpg"
+  avatar           : "profile_new.jpg"
   name             : "Gabriel Sasseville"
   pronouns         : # example: "she/her"  
   bio              : "M.Sc. in Astrophysics. Interested in ML applications."
