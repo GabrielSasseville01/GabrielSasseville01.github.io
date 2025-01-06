@@ -6,7 +6,7 @@ permalink: /publication/m-sigma
 excerpt: 'First-authored paper published as part of my M.Sc.'
 date: 2024-11-11
 venue: 'Astrophysical Journal'
-paperurl: 'https://arxiv.org/abs/2411.07242'
+paperurl: 'https://iopscience.iop.org/article/10.3847/1538-4357/ad93d4'
 ---
 
 **Abstract**
