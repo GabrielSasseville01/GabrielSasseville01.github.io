@@ -16,11 +16,24 @@ Link for 1 page resume [here](https://GabrielSasseville01.github.io/files/Short_
 
 Education Summary
 ======
+* PhD in Computer Science, Mila Institute, 2025-present
 * M.Sc. in Astrophysics, University of Montreal and McGill University, 2023-2025
 * B.Sc. in Computer Science and Physics, University of Montreal, 2020-2023
 
 Awards/Grants
 ======
+- **Computer Science PhD Entrance Scholarship – 2 500 $ CAD**  
+  *Department of Computer Science and Operations Research (DIRO), University of Montreal, 2025*  
+
+- **Richard J. Schmeelk Canada Fellowship – 10 000 $ CAD**  
+  *Schmeelk Canada Foundation, 2025*  
+
+- **PhD Research Scholarship – 120 000 $ CAD**  
+  *Natural Sciences and Engineering Research Council of Canada (NSERC), 2025–2028*  
+
+- **Doctoral Research Scholarship – 100 000 $ CAD (Declined)**  
+  *Fonds de Recherche du Québec – Nature et Technologies (FRQNT), 2025–2029*
+
 - **Excellence Scholarship for Graduate Studies - 5000$ CAD**  
   *J.A. DeSève, 2024*
 
