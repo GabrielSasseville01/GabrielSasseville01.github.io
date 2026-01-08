@@ -20,13 +20,19 @@ Education Summary
 * M.Sc. in Astrophysics, University of Montreal and McGill University, 2023-2025
 * B.Sc. in Computer Science and Physics, University of Montreal, 2020-2023
 
+Professional Experience
+======
+* **AI Research Scientist** — Environment and Climate Change Canada  
+  *Project: LSTM for Streamflow Forecasting in the Great Lakes Region*  
+  *Jan 2025 – Aug 2025*
+
 Awards/Grants
 ======
 - **Computer Science PhD Entrance Scholarship – 2 500 $ CAD**  
   *Department of Computer Science and Operations Research (DIRO), University of Montreal, 2025*  
 
-- **Richard J. Schmeelk Canada Fellowship – 10 000 $ CAD**  
-  *Schmeelk Canada Foundation, 2025*  
+- **Richard J. Schmeelk Canada Fellowship – 30 000 $ CAD**  
+  *Schmeelk Canada Foundation, 2025-2028*  
 
 - **PhD Research Scholarship – 120 000 $ CAD**  
   *Natural Sciences and Engineering Research Council of Canada (NSERC), 2025–2028*  
