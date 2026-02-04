@@ -3,9 +3,10 @@ title: "Probabilistic Interpolation of Sagittarius A*'s Multi-Wavelength Light C
 collection: publications
 category: manuscripts
 permalink: /publication/sgra
-excerpt: 'First-authored paper submitted to ApJ, currently under review.'
-date: 2025-08-20
+excerpt: 'First-authored paper published as part of my M.Sc.'
+date: 2026-02-03
 venue: 'Astrophysical Journal'
+paperurl: 'https://iopscience.iop.org/article/10.3847/1538-4357/ae2d15'
 ---
 
 **Abstract**
