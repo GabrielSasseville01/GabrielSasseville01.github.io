@@ -1011,15 +1011,15 @@ function SynthesisMatrix() {
             <div style={{ overflowX:"auto" }}>
               <table style={{ borderCollapse:"collapse", width:"100%", fontSize:11 }}>
                 <thead>
-                  <tr style={{ background:"#10131e", position:"sticky", top:73 }}>
-                    <th style={{ ...thStyle, width:160, textAlign:"left" }}>Paper</th>
-                    <th style={{ ...thStyle, width:70 }}>Year</th>
-                    <th style={{ ...thStyle, width:120 }}>Domain Cluster</th>
-                    <th style={{ ...thStyle, width:160 }}>Approach</th>
-                    <th style={{ ...thStyle, width:180 }}>Method</th>
-                    <th style={{ ...thStyle, width:130 }}>Evaluation</th>
-                    <th style={{ ...thStyle, width:220 }}>Key Assumptions</th>
-                    <th style={{ ...thStyle, width:280 }}>Research Gap / Opportunity</th>
+                  <tr>
+                    <th style={{ ...thStyle, width:160, textAlign:"left", position:"sticky", top:85, zIndex:10, boxShadow:"0 2px 0 0 #1e2535" }}>Paper</th>
+                    <th style={{ ...thStyle, width:70, position:"sticky", top:85, zIndex:10, boxShadow:"0 2px 0 0 #1e2535" }}>Year</th>
+                    <th style={{ ...thStyle, width:120, position:"sticky", top:85, zIndex:10, boxShadow:"0 2px 0 0 #1e2535" }}>Domain Cluster</th>
+                    <th style={{ ...thStyle, width:160, position:"sticky", top:85, zIndex:10, boxShadow:"0 2px 0 0 #1e2535" }}>Approach</th>
+                    <th style={{ ...thStyle, width:180, position:"sticky", top:85, zIndex:10, boxShadow:"0 2px 0 0 #1e2535" }}>Method</th>
+                    <th style={{ ...thStyle, width:130, position:"sticky", top:85, zIndex:10, boxShadow:"0 2px 0 0 #1e2535" }}>Evaluation</th>
+                    <th style={{ ...thStyle, width:220, position:"sticky", top:85, zIndex:10, boxShadow:"0 2px 0 0 #1e2535" }}>Key Assumptions</th>
+                    <th style={{ ...thStyle, width:280, position:"sticky", top:85, zIndex:10, boxShadow:"0 2px 0 0 #1e2535" }}>Research Gap / Opportunity</th>
                   </tr>
                 </thead>
                 <tbody>
