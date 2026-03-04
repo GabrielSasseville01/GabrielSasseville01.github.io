@@ -1007,19 +1007,19 @@ function SynthesisMatrix() {
               )}
             </div>
 
-            {/* TABLE */}
-            <div style={{ overflowX:"auto" }}>
+            {/* TABLE - scrollable container so sticky header works correctly */}
+            <div style={{ maxHeight:"calc(100vh - 280px)", overflow:"auto", overflowX:"auto" }}>
               <table style={{ borderCollapse:"collapse", width:"100%", fontSize:11 }}>
                 <thead>
                   <tr>
-                    <th style={{ ...thStyle, width:160, textAlign:"left", position:"sticky", top:85, zIndex:10, boxShadow:"0 2px 0 0 #1e2535" }}>Paper</th>
-                    <th style={{ ...thStyle, width:70, position:"sticky", top:85, zIndex:10, boxShadow:"0 2px 0 0 #1e2535" }}>Year</th>
-                    <th style={{ ...thStyle, width:120, position:"sticky", top:85, zIndex:10, boxShadow:"0 2px 0 0 #1e2535" }}>Domain Cluster</th>
-                    <th style={{ ...thStyle, width:160, position:"sticky", top:85, zIndex:10, boxShadow:"0 2px 0 0 #1e2535" }}>Approach</th>
-                    <th style={{ ...thStyle, width:180, position:"sticky", top:85, zIndex:10, boxShadow:"0 2px 0 0 #1e2535" }}>Method</th>
-                    <th style={{ ...thStyle, width:130, position:"sticky", top:85, zIndex:10, boxShadow:"0 2px 0 0 #1e2535" }}>Evaluation</th>
-                    <th style={{ ...thStyle, width:220, position:"sticky", top:85, zIndex:10, boxShadow:"0 2px 0 0 #1e2535" }}>Key Assumptions</th>
-                    <th style={{ ...thStyle, width:280, position:"sticky", top:85, zIndex:10, boxShadow:"0 2px 0 0 #1e2535" }}>Research Gap / Opportunity</th>
+                    <th style={{ ...thStyle, width:160, textAlign:"left", position:"sticky", top:0, zIndex:10, boxShadow:"0 2px 0 0 #1e2535" }}>Paper</th>
+                    <th style={{ ...thStyle, width:70, position:"sticky", top:0, zIndex:10, boxShadow:"0 2px 0 0 #1e2535" }}>Year</th>
+                    <th style={{ ...thStyle, width:120, position:"sticky", top:0, zIndex:10, boxShadow:"0 2px 0 0 #1e2535" }}>Domain Cluster</th>
+                    <th style={{ ...thStyle, width:160, position:"sticky", top:0, zIndex:10, boxShadow:"0 2px 0 0 #1e2535" }}>Approach</th>
+                    <th style={{ ...thStyle, width:180, position:"sticky", top:0, zIndex:10, boxShadow:"0 2px 0 0 #1e2535" }}>Method</th>
+                    <th style={{ ...thStyle, width:130, position:"sticky", top:0, zIndex:10, boxShadow:"0 2px 0 0 #1e2535" }}>Evaluation</th>
+                    <th style={{ ...thStyle, width:220, position:"sticky", top:0, zIndex:10, boxShadow:"0 2px 0 0 #1e2535" }}>Key Assumptions</th>
+                    <th style={{ ...thStyle, width:280, position:"sticky", top:0, zIndex:10, boxShadow:"0 2px 0 0 #1e2535" }}>Research Gap / Opportunity</th>
                   </tr>
                 </thead>
                 <tbody>
