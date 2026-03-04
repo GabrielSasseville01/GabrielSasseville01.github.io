@@ -18,6 +18,7 @@ This project demonstrates **Diffusion Model Predictive Control (DMPC)** for safe
 ## Demo & Resources
 
 - **Interactive Demo**: [View the full demonstration](https://gabrielsasseville01.github.io/AUTO-IceNav-Demo/)
+- **Synthesis Matrix**: [Literature review matrix]({{ site.baseurl }}/synthesis_matrix/) — interactive analysis of 60+ papers on autonomous navigation in ice-covered waters
 - **GitHub Repository**: [AUTO-IceNav](https://github.com/GabrielSasseville01/AUTO-IceNav)
 
 ## Authors
