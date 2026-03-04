@@ -310,7 +310,6 @@ plugins:
   - jekyll-gist
   - jekyll-paginate
   - jekyll-sitemap
-  - jemoji
 
 # Mimic GitHub Pages with --safe
 whitelist:
@@ -318,7 +317,6 @@ whitelist:
   - jekyll-gist
   - jekyll-paginate
   - jekyll-sitemap
-  - jemoji
 
 
 # Archives

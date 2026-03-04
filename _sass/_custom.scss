@@ -1,0 +1,235 @@
+/* ==========================================================================
+   CUSTOM STYLES - Enhanced Academic Site
+   ========================================================================== */
+
+/* Body - visible background */
+body {
+  background: linear-gradient(180deg, #eef1f5 0%, #e2e7ed 100%);
+  min-height: 100vh;
+}
+
+/* Masthead - dark header */
+.masthead {
+  background: #1e293b !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.greedy-nav {
+  background: transparent !important;
+
+  .visible-links a {
+    color: rgba(255, 255, 255, 0.9) !important;
+    font-weight: 500;
+
+    &:hover {
+      color: #5eead4 !important;
+    }
+
+    &:before {
+      background: #5eead4 !important;
+    }
+  }
+
+  button {
+    background: rgba(255, 255, 255, 0.15) !important;
+    color: #fff !important;
+  }
+}
+
+/* Sidebar - spacing from main content */
+.sidebar {
+  @include breakpoint($large) {
+    padding-right: 1em;
+    box-sizing: border-box;
+  }
+
+  .author__avatar img {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border: 2px solid #e2e8f0;
+  }
+
+  .author__name {
+    font-weight: 700;
+    color: #1e293b;
+    font-size: 1.1em;
+  }
+
+  .author__bio {
+    color: #64748b;
+  }
+
+  .author__urls a {
+    color: #475569;
+
+    &:hover {
+      color: $primary-color;
+    }
+  }
+}
+
+/* Main content area - prominent cards */
+#main {
+  padding-top: 0.5em;
+}
+
+#main .page__inner-wrap,
+#main .archive {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  padding: 2.5em 2em;
+  border: 1px solid rgba(0, 0, 0, 0.04);
+
+  @include breakpoint($medium) {
+    padding: 3em 2.5em;
+  }
+}
+
+#main .archive {
+  padding: 2em 2em 2.5em;
+
+  @include breakpoint($medium) {
+    padding: 2.5em 2.5em 3em;
+  }
+}
+
+/* Page titles */
+.page__title {
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  color: #1e293b;
+  font-size: 1.75em;
+}
+
+.page__content h2 {
+  color: #1e293b;
+  border-bottom: 2px solid $primary-color;
+  padding-bottom: 0.5em;
+  font-weight: 600;
+}
+
+.page__content h3 {
+  color: #334155;
+}
+
+/* Links */
+a {
+  color: $info-color;
+  transition: color 0.2s ease;
+
+  &:hover {
+    color: $primary-color;
+  }
+}
+
+/* Archive items */
+.archive__subtitle {
+  font-weight: 700;
+  color: #1e293b;
+  font-size: 1.1em;
+  border-bottom: 2px solid $primary-color;
+  padding-bottom: 0.5em;
+}
+
+.archive__item-title a {
+  color: #1e293b;
+  font-weight: 600;
+
+  &:hover {
+    color: $primary-color;
+  }
+}
+
+.list__item .archive__item {
+  padding: 1.5em 0;
+  border-bottom: 1px solid #e2e8f0;
+  transition: background 0.2s ease;
+
+  &:hover {
+    background: rgba($primary-color, 0.03);
+  }
+}
+
+.list__item .archive__item:last-child {
+  border-bottom: none;
+}
+
+/* Blockquotes */
+blockquote {
+  border-left: 4px solid $primary-color;
+  background: linear-gradient(90deg, rgba($primary-color, 0.08) 0%, transparent 100%);
+  border-radius: 0 8px 8px 0;
+  padding: 1em 1.5em;
+}
+
+/* Code */
+p > code, a > code, li > code, td > code {
+  background: #f1f5f9;
+  color: #0f766e;
+  padding: 0.2em 0.5em;
+  border-radius: 4px;
+  font-weight: 500;
+}
+
+/* Buttons */
+.btn {
+  font-weight: 600;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+.btn--primary {
+  background: linear-gradient(135deg, $primary-color 0%, #0f766e 100%);
+  border: none;
+  box-shadow: 0 2px 8px rgba($primary-color, 0.3);
+
+  &:hover {
+    box-shadow: 0 4px 12px rgba($primary-color, 0.4);
+  }
+}
+
+/* Footer */
+.page__footer {
+  background: #1e293b !important;
+  color: rgba(255, 255, 255, 0.85) !important;
+  border-top: none !important;
+  padding: 2.5em 0 !important;
+
+  a {
+    color: #5eead4 !important;
+
+    &:hover {
+      color: #fff !important;
+    }
+  }
+
+  .fas, .fab, .far, .fal {
+    color: #5eead4 !important;
+  }
+}
+
+/* Taxonomy tags */
+.page__taxonomy-item {
+  background: #f1f5f9;
+  border-color: #e2e8f0;
+  transition: all 0.2s ease;
+
+  &:hover {
+    background: rgba($primary-color, 0.1);
+    border-color: $primary-color;
+    color: $primary-color;
+  }
+}
+
+/* Tables */
+table {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+}
+
+th {
+  background: #f8fafc !important;
+  font-weight: 600;
+  color: #1e293b;
+}
