@@ -815,6 +815,114 @@ const papers = [
     gap: "No ice-specific regulations encoded; Arctic routing rules not in COLREGS scope",
     keyContrib: "Dual-core LLM for navigation; ReAct prompting + fine-tuned COLREGS model",
   },
+
+  // ── SENSOR & PERCEPTION ────────────────────────────────────────────────
+  {
+    id: "sandru2021",
+    short: "Sandru et al. 2021",
+    title: "Shipborne Sea-Ice Field Mapping Using a LiDAR",
+    year: 2021,
+    domainCluster: "Sensor & Perception",
+    approach: ["systems", "empirical"],
+    method: ["data-driven", "remote-sensing"],
+    evaluation: ["real-world"],
+    assumptions: ["ship-mounted-LiDAR-available", "calm-enough-for-attitude-compensation", "offline-processing"],
+    gap: "Offline 3D mapping pipeline not yet connected to real-time route planners; no ice classification fed back to navigation cost function",
+    keyContrib: "First ship-mounted LiDAR system for near-field 3D ice mapping; validated in Aalto ice tank and on SA Agulhas II Antarctic voyage",
+  },
+  {
+    id: "dumaslefevre2023",
+    short: "Dumas-Lefebvre & Dumont 2023",
+    title: "Aerial Observations of Sea Ice Breakup by Ship Waves",
+    year: 2023,
+    domainCluster: "Sensor & Perception",
+    approach: ["empirical"],
+    method: ["data-driven", "remote-sensing"],
+    evaluation: ["real-world"],
+    assumptions: ["UAV-deployable-from-ship", "calm-enough-for-drone-ops", "Baffin-Bay-representative"],
+    gap: "Drone observations produce FSD data but not yet ingested by any navigation planner as a dynamic input signal",
+    keyContrib: "High-resolution drone FSD observations of wave-induced breakup; modal FSD shape links preferred floe size to ice thickness",
+  },
+  {
+    id: "panchi2024",
+    short: "Panchi & Kim 2024",
+    title: "Deep Learning Strategies for Weather-Degraded Optical Sea Ice Images (SeaIceWeather)",
+    year: 2024,
+    domainCluster: "Sensor & Perception",
+    approach: ["empirical", "systems"],
+    method: ["learning-based", "data-driven"],
+    evaluation: ["benchmark", "real-world"],
+    assumptions: ["clean-degraded-image-pairs-representative", "four-weather-conditions-sufficient", "classification-proxy-for-navigation"],
+    gap: "Dataset and denoising pipeline not yet connected to downstream ship navigation or ice characterization for planning; data behind IEEE DataPort paywall",
+    keyContrib: "First open-source SeaIceWeather dataset with paired clean/degraded shipborne optical ice images; all-in-one weather-resilient segmentation model",
+  },
+  {
+    id: "yeo2025detection",
+    short: "Yeo et al. 2025",
+    title: "Ship Localization via 3D Object Detection from a Camera Using Virtual Data",
+    year: 2025,
+    domainCluster: "Sensor & Perception",
+    approach: ["systems", "empirical"],
+    method: ["learning-based", "simulation"],
+    evaluation: ["benchmark", "real-world"],
+    assumptions: ["virtual-environment-representative", "single-camera-sufficient", "monocular-depth-estimable"],
+    gap: "Trained and tested on ship detection (not ice); virtual data realism for ice floes untested; Arctic domain gap unaddressed",
+    keyContrib: "MonoLSS 3D detection trained on virtual maritime environment; up to 92% error reduction vs horizon-based localization; sim-to-real pipeline for scarce maritime data",
+  },
+  {
+    id: "kim2024tracking",
+    short: "Kim et al. 2024",
+    title: "Hybrid EKF+DNN Tracking Method for Maritime Obstacles Using Sensor Data",
+    year: 2024,
+    domainCluster: "Sensor & Perception",
+    approach: ["empirical", "systems"],
+    method: ["learning-based", "data-driven"],
+    evaluation: ["real-world"],
+    assumptions: ["sensor-data-available", "DNN-trained-on-field-test-data", "obstacle-state-observable"],
+    gap: "Tracking validated for open-water vessel obstacles; ice floe tracking under partial observability and high clutter not addressed",
+    keyContrib: "Hybrid EKF+DNN obstacle tracker; 42% SOG accuracy improvement; compensates EKF parameter mis-tuning with learned correction",
+  },
+
+  // ── ADDITIONAL MASS NAVIGATION ─────────────────────────────────────────
+  {
+    id: "lyu2024apf",
+    short: "Lyu et al. 2024",
+    title: "Autonomous Collision Avoidance for MASS Using Precise Potential Field Modelling",
+    year: 2024,
+    domainCluster: "MASS Navigation",
+    approach: ["systems", "theory"],
+    method: ["optimization"],
+    evaluation: ["benchmark"],
+    assumptions: ["static-chart-obstacles", "COLREGs-sufficient", "open-water"],
+    gap: "Open water only; APF-based method not designed for dense ice obstacle fields; concave polygon handling inapplicable to dynamic floes",
+    keyContrib: "Fast APF construction for complex concave static obstacles + quaternion ship domain for dynamic ships; COLREGs-constrained optimal CA path",
+  },
+  {
+    id: "choi2026ais",
+    short: "Choi et al. 2026",
+    title: "Route Planning for Small Ships Based on Historical AIS Data",
+    year: 2026,
+    domainCluster: "MASS Navigation",
+    approach: ["systems", "empirical"],
+    method: ["data-driven", "optimization"],
+    evaluation: ["real-world"],
+    assumptions: ["AIS-data-available", "historical-patterns-representative", "no-ice"],
+    gap: "AIS-derived routing for open coastal waters; ice-covered Arctic waters produce anomalous AIS patterns that break historical similarity assumptions",
+    keyContrib: "HFDA* integrates historical AIS frequency + directional preference into A*; higher fidelity to operator knowledge vs pure A*",
+  },
+  {
+    id: "yeo2025marina",
+    short: "Yeo et al. 2025 (Marina)",
+    title: "Route Planning for Small Ships Inside the Marina",
+    year: 2025,
+    domainCluster: "MASS Navigation",
+    approach: ["systems"],
+    method: ["optimization"],
+    evaluation: ["real-world"],
+    assumptions: ["known-nautical-chart", "calm-water", "no-ice"],
+    gap: "Highly specific to marina geometry; Voronoi centerline method assumes fixed port infrastructure — not transferable to dynamic ice fields",
+    keyContrib: "Voronoi centerline charts + A* with depth constraints for small ships in marinas; port-to-port passing rules postprocessed",
+  },
 ];
 
 // ─── DIMENSION DEFINITIONS ───────────────────────────────────────────────────
@@ -864,6 +972,7 @@ const DOMAIN_COLORS = {
   "MASS Navigation": "#4DB6AC",
   "RL Navigation": "#F48FB1",
   "Tools & HF": "#A5D6A7",
+  "Sensor & Perception": "#E040FB",
 };
 
 // ─── IDENTIFIED GAPS (from matrix analysis) ──────────────────────────────────
@@ -880,9 +989,9 @@ const gaps = [
     id: "g2",
     title: "Ice Forecasts → Navigation Planning Disconnect",
     severity: "critical",
-    description: "IceNet (Andersson 2021) and the Durand 2024 surrogate provide fast, accurate sea ice forecasts, yet no navigation planner in this set consumes them as input. The prediction–planning interface is the dominant unaddressed integration gap.",
-    affectedClusters: ["Ice Physics", "Ice Navigation", "RL Navigation"],
-    papersCount: 7,
+    description: "IceNet (Andersson 2021) and the Durand 2024 surrogate provide fast, accurate sea ice forecasts, yet no navigation planner in this set consumes them as input. The prediction–planning interface is the dominant unaddressed integration gap. More broadly, a hierarchical sensing pipeline is missing: satellite forecasts (IceNet) could feed strategic-level route planning, while shipborne sensors (LiDAR — Sandru 2021, Veggeland 2025; optical — Panchi 2024) could feed local reactive planning. This full stack — from satellite to sensor to planner — does not exist in any single system.",
+    affectedClusters: ["Ice Physics", "Ice Navigation", "RL Navigation", "Sensor & Perception"],
+    papersCount: 9,
   },
   {
     id: "g3",
@@ -940,6 +1049,14 @@ const gaps = [
     affectedClusters: ["Convoy Ops", "RL Navigation", "Ice Navigation"],
     papersCount: 3,
   },
+  {
+    id: "g10",
+    title: "Arctic Sensor Data Scarcity & Sim-to-Real Gap",
+    severity: "critical",
+    description: "Real shipborne sensor data for ice-covered waters is extremely scarce. Sandru 2021 demonstrates LiDAR ice mapping from a ship; Panchi & Kim 2024 provide the only open optical ice dataset (SeaIceWeather) — currently behind a paywall. Dumas-Lefebvre 2023 offers drone-based FSD observations. None of this sensor data is yet connected to navigation planners. Meanwhile, Kong & Roh 2024 and Yeo 2025 show that virtual environments can generate synthetic sensor data for training — a critical path forward given how rarely real Arctic sensor datasets are publicly available. The autonomous driving parallel (as noted by the team) is instructive: the field only became viable once rich sensor datasets emerged. Arctic ice navigation faces the same bottleneck.",
+    affectedClusters: ["Sensor & Perception", "Ice Navigation", "Tools & HF"],
+    papersCount: 6,
+  },
 ];
 
 // ─── COMPONENT ────────────────────────────────────────────────────────────────
@@ -969,11 +1086,18 @@ function SynthesisMatrix() {
         <div style={{ display:"flex", alignItems:"baseline", justifyContent:"space-between", flexWrap:"wrap", gap:12 }}>
           <div>
             <div style={{ fontSize:10, letterSpacing:4, color:"#4FC3F7", textTransform:"uppercase", marginBottom:4 }}>
-              Synthesis Matrix · {papers.length} Papers · 4 Dimensions · 9 Gaps
+              Synthesis Matrix · {papers.length} Papers · 4 Dimensions · 10 Gaps
             </div>
             <h1 style={{ margin:0, fontSize:"clamp(14px,2vw,22px)", fontFamily:"'Georgia',serif", color:"#f0f4ff", fontWeight:700 }}>
               Autonomous Navigation in Ice-Covered Arctic Waters
             </h1>
+            <div style={{ marginTop:6, fontSize:11, color:"#4a5568", lineHeight:1.6 }}>
+              General reference on AI & sensor integration in autonomous ships:{" "}
+              <a href="https://yenra.com/ai20/autonomous-ship-navigation/" target="_blank" rel="noopener noreferrer"
+                style={{ color:"#4FC3F7", textDecoration:"none", borderBottom:"1px solid rgba(79,195,247,0.4)" }}>
+                Yenra — AI Autonomous Ship Navigation: 20 Advances (2025)
+              </a>
+            </div>
           </div>
           <div style={{ display:"flex", gap:8 }}>
             {[["matrix","Matrix"],["affinity","Affinity Map"],["gaps","Gap Analysis"]].map(([v,l]) => (
